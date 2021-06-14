@@ -306,6 +306,10 @@ ul {
   width: 70%;
 }
 
+.chart_bar_aws{
+  width: 70%;
+}
+
 .chart_bar_git{
   width: 70%;
 }
@@ -334,7 +338,10 @@ ul {
 
 .workpic_container {
   position: relative;
+  max-width: 350px;
 }
+
+.workpic_container {}
 
 #works p {
   margin-left: 4rem;
@@ -372,7 +379,7 @@ footer.footer {
   margin: .5rem auto;
 }
 
-/* タブレット・PC向け */
+/* ã‚¿ãƒ–ãƒ¬ãƒƒãƒˆãƒ»PCå‘ã‘ */
 
 @media(min-width:768px){
 
