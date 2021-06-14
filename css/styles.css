@@ -8,6 +8,7 @@
 
 html {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 section {
@@ -24,9 +26,9 @@ section {
 }
 
 #main{
-  /* flex: 1; */
   width: 100%;
   max-width: 1250px;
+  margin: 0 auto;
 }
 
 #top_hd{
@@ -39,15 +41,12 @@ section {
 }
 
 .toplines{
+  width: 100%;
   position: relative;
   height: 5vh;
   margin: 0;
-}
-
-
-
-#toplines_below{
-  left: 29%;
+  padding-left: 45px;
+  box-sizing: border-box;
 }
 
 .toplines li{
@@ -66,7 +65,7 @@ section {
   height: 5px;
 }
 #toplines_above li:nth-child(3), #toplines_below li:nth-child(1){
-  background: rgba(109, 214, 149, 1);
+  background: #6dd695;
   height: 6px;
 }
 
@@ -83,7 +82,61 @@ section {
   left: 16%;
 }
 
-#top_name {display: flex;margin-left: 25%;padding-bottom: .5rem;font-size: 1.5rem;height: 4rem;align-items: center;}
+#toplines_above li:nth-child(1) {
+  animation: fadeinRight .5s ease-in-out;
+}
+#toplines_above li:nth-child(2) {
+  animation: fadeinRight .7s ease-in-out;
+}
+#toplines_above li:nth-child(3) {
+  animation: fadeinRight .9s ease-in-out;
+}
+
+@keyframes fadeinRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeinLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#toplines_below li:nth-child(1) {
+  left: 23%;
+  animation: fadeinLeft .5s ease-in-out;
+}
+#toplines_below li:nth-child(2) {
+  left: 31%;
+  animation: fadeinLeft .7s ease-in-out;
+}
+#toplines_below li:nth-child(3) {
+  left: 39%;
+  animation: fadeinLeft .9s ease-in-out;
+}
+
+
+#top_name {
+  display: flex;
+  margin-left: 25%;
+  padding-bottom: .5rem;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  height: 4rem;
+  align-items: center;
+  font-style: oblique;
+}
 
 #contents{
   width: 100%;
@@ -93,6 +146,7 @@ h1 {
   position: relative;
   font-size: 1.4rem;
   font-weight: bold;
+  
 }
 
 h1::before {
@@ -117,7 +171,7 @@ h2::before {
   position: absolute;
   content:"";
   left: -1.2rem;
-  top: 50%;
+  top:  50%;
   width: 1rem;
   height: 2px;
   background: #6dd695;
@@ -137,17 +191,153 @@ ul {
   margin-bottom: 1.5rem;
 }
 
+#contents ul li span {
+  color: #000000;
+}
+
 .detail {
   margin: .5rem 0 1rem;
   letter-spacing: .05rem;
 }
 
+.chart:not(:first-child) {
+  margin: 1rem 0 2rem;
+}
+
+.chart_horiz {
+  overflow: hidden;
+  width: 100%;
+  margin-left: -2rem !important;
+}
+
+.chart_bar {
+  height: 2rem;
+  margin-bottom: 1rem !important;
+  background: #6DD695;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: .15rem;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart_bar_html{
+  width: 80%;
+}
+
+.chart_bar_css{
+  width: 80%;
+}
+
+.chart_bar_bs{
+  width: 60%;
+}
+
+.chart_bar_js{
+  width: 80%;
+}
+
+.chart_bar_jq{
+  width: 70%;
+}
+
+.chart_bar_vue{
+  width: 30%;
+}
+
+.chart_bar_wp{
+  width: 80%;
+}
+
+.chart_bar_php{
+  width: 70%;
+}
+
+.chart_bar_java{
+  width: 70%;
+}
+
+.chart_bar_spring{
+  width: 70%;
+}
+
+.chart_bar_cs{
+  width: 70%;
+}
+
+.chart_bar_dotnet{
+  width: 70%;
+}
+
+.chart_bar_mysql{
+  width: 80%;
+}
+
+.chart_bar_mysql{
+  width: 80%;
+}
+
+.chart_bar_sqlserver{
+  width: 70%;
+}
+
+.chart_bar_PostgreSQL{
+  width: 60%;
+}
+
+.chart_bar_oracle{
+  width: 50%;
+}
+
+.chart_bar_linux{
+  width: 80%;
+}
+
+.chart_bar_shellscript{
+  width: 70%;
+}
+
+.chart_bar_windowsserver{
+  width: 60%;
+}
+
+.chart_bar_iis{
+  width: 70%;
+}
+
+.chart_bar_git{
+  width: 70%;
+}
+
+.chart_bar_svn{
+  width: 60%;
+}
+
+.chart_bar_translate{
+  width: 90%;
+}
+
+.chart_bar_interpret{
+  width: 80%;
+}
+
+.animated{
+  opacity: 0;
+}
+
 .work_pic {
   width: 100%;
+  height: 25vh;
+  opacity: 0;
 }
 
 .workpic_container {
   position: relative;
+}
+
+#works p {
+  margin-left: 5rem;
 }
 
 .img_filter {
@@ -156,6 +346,7 @@ ul {
   height: 100%;
   top: 0;
   background: rgba(109,214,149, .4);
+  opacity: 0;
 }
 
 footer.footer {
@@ -179,4 +370,73 @@ footer.footer {
   height: 20%;
   font-size: .9rem;
   margin: .5rem auto;
+}
+
+/* タブレット・PC向け */
+
+@media(min-width:768px){
+
+  #top_hd {
+    width: 70%;
+    margin: 1rem 0 3rem;
+    margin: 1rem auto 2rem;
+  }
+
+  .toplines {
+    width: 100%;
+    height: 7vh;
+    margin: 0;
+    padding-left: 45px;
+  }
+
+  #toplines_above li:nth-child(1), #toplines_below li:nth-child(3) {
+    height: 6px;
+  }
+
+  #toplines_above li:nth-child(2), #toplines_below li:nth-child(2) {
+    height: 7px;
+}
+
+#toplines_above li:nth-child(3), #toplines_below li:nth-child(1) {
+  height: 8px;
+}
+
+.toplines li:nth-child(1){
+  top: 0;
+  left: 0;
+}
+.toplines li:nth-child(2){
+  top: 15px;
+  left: 9%;
+}
+.toplines li:nth-child(3){
+  top: 30px;
+  left: 18%;
+}
+
+#top_name {
+  padding-bottom: 1.5rem;
+}
+
+
+
+
+  #vocation_list{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+  }
+
+  #skill_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+  }
+
+  #worklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 3rem;
+  }
+
 }

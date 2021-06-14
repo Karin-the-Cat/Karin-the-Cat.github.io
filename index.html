@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script type="text/javascript"
- src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js">
-</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/portfolio.js"></script>
   </head>
   <body>
       <div id="main">
@@ -22,7 +22,7 @@
             <li>
             </li>
           </ul>
-          <div id="top_name">
+          <div id="top_name" class="animated" data-animate="fadeIn delay-1s slow">
             Miyu Watanabe<br/>
             portfolio
           </div>
@@ -42,19 +42,19 @@
             </h1>
             <ul id="vocation_list">
               <li>
-                <h2>フロントエンドエンジニア</h2>
+                <h2 class="animated" data-animate="fadeInRight delay-2s fast">フロントエンドエンジニア</h2>
                 <p class="vocation_detail detail">
                   ミニマリストデザイン・洗練されたUI・カラーユニバーサルデザインが得意
                 </p>
               </li>
               <li>
-                <h2>バックエンドエンジニア</h2>
+                <h2 class="animated" data-animate="fadeInRight delay-2s fast">バックエンドエンジニア</h2>
                 <p class="vocation_detail detail">
                   RDB,Linux,AWSなど幅広い技術に対応可能
                 </p>
               </li>
               <li>
-                <h2>その他</h2>
+                <h2 class="animated" data-animate="fadeInRight delay-2s fast">その他</h2>
                 <p class="vocation_detail detail">
                   英語翻訳家としても活動中(IT,法律が得意分野)
                 </p>
@@ -68,38 +68,245 @@
             <ul id="skill_list">
               <li>
                 <h2>フロントエンド</h2>
-                <div class="skillchart">  
-                </div>              
+                <div class="chart chart_front">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_html animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        HTML,HTML5
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_css animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        CSS,CSS3
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_bs animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Bootstrap
+                      </span>
+                      <span class="chart_label_2">
+                        60
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_js animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        JavaScript
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_jq animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        JQuery
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_vue animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Vue.js
+                      </span>
+                      <span class="chart_label_2">
+                        30
+                      </span>
+                    </li>
+                    
+                  </ul>
+                </div>           
               </li>
               <li>
                 <h2>CMS</h2>
-                <div class="skillchart">  
-                </div>              
+                <div class="chart chart_cms">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_wp animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        WordPress
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                  </ul>
+                </div>           
               </li>
               <li>
                 <h2>バックエンド</h2>
-                <div class="skillchart">  
+                <div class="chart chart_back">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_php animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        PHP
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_java animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Java
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_spring animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        spring
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_cs animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        C#
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_dotnet animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        .NET
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                  </ul>
                 </div>              
               </li>
               <li>
                 <h2>DB</h2>
-                <div class="skillchart">  
+                <div class="chart chart_db">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_mysql animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        MySQL
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_sqlserver animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        SQLServer
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_PostgreSQL animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        PostgreSQL
+                      </span>
+                      <span class="chart_label_2">
+                        60
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_oracle animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Oracle
+                      </span>
+                      <span class="chart_label_2">
+                        50
+                      </span>
+                    </li>
+                  </ul>
                 </div>              
               </li>
               <li>
                 <h2>インフラ</h2>
-                <div class="skillchart">  
-                </div>              
+                <div class="chart chart_infra">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_linux animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Linux
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_shellscript animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        ShellScript
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_windowsserver animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        WindowsServer
+                      </span>
+                      <span class="chart_label_2">
+                        60
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_iis animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        IIS
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                  </ul>
+                </div>     
               </li>
               <li>
                 <h2>バージョン管理</h2>
-                <div class="skillchart">  
-                </div>              
+                <div class="chart chart_version">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_git animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        Git
+                      </span>
+                      <span class="chart_label_2">
+                        70
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_svn animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        SVN
+                      </span>
+                      <span class="chart_label_2">
+                        60
+                      </span>
+                    </li>
+                  </ul>
+                </div>                
               </li>
               <li>
                 <h2>その他</h2>
-                <div class="skillchart">  
-                </div>              
+                <div class="chart chart_other">
+                  <ul class="chart_horiz">
+                    <li class="chart_bar chart_bar_translate animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        英語翻訳
+                      </span>
+                      <span class="chart_label_2">
+                        90
+                      </span>
+                    </li>
+                    <li class="chart_bar chart_bar_interpret animated" data-animate="fadeInRight">
+                      <span class="chart_label_1">
+                        英語通訳
+                      </span>
+                      <span class="chart_label_2">
+                        80
+                      </span>
+                    </li>
+                  </ul>
+                </div>               
               </li>
             </ul>
           </section>
@@ -109,26 +316,27 @@
             </h1>
             <ul id="worklist">
               <li>
-                <h2>Neko Inc.<span>(HTML,CSS)</span></h2>
+                <h2 class="animated" data-animate="fadeInRight delay-0.3s fast">Neko Inc.<span>(HTML,CSS)</span></h2>
                 <a class="worklink" href="http://mwwork.html.xdomain.jp/NEKO/">
                   <div class="workpic_container">
-                    <img class="work_pic" alt="架空サイトの写真" src="img/work1.jpg">
-                    <div class="img_filter"></div>
+                    <img class="work_pic animated" data-animate="fadeInUp fast" alt="架空サイトの写真" src="img/work1.jpg">
+                    <div class="img_filter animated" data-animate="fadeInUp fast delay-0.3s"></div>
                   </div>
                 </a>
                 <div class="work_detail detail">HTML,CSSの練習用に作った架空サイト</div>
               </li>
               <li>
-                <h2>MyTodos<span>(HTML,CSS,Vue.js)</span></h2>
+                <h2 class="animated" data-animate="fadeInRight delay-0.3s fast">MyTodos<span>(HTML,CSS,Vue.js)</span></h2>
                 <a class="worklink" href="http://mwwork.html.xdomain.jp/TODOapp/">
                   <div class="workpic_container">
-                    <img class="work_pic" alt="Vue.jsアプリの写真" src="img/work2.jpg">
-                    <div class="img_filter"></div>
+                    <img class="work_pic animated" data-animate="fadeInUp delay-0.3s fast" alt="Vue.jsアプリの写真" src="img/work2.jpg">
+                    <div class="img_filter animated" data-animate="fadeInUp delay-0.3s fast"></div>
                   </div>
                 </a>
                 <div class="work_detail detail">Vue.jsの練習用に作った簡易アプリ</div>
               </li>
             </ul>
+            <p>...その他企業サイトリニューアル等</p>
           </section>
           <section id="contact">
             <h1>
@@ -137,7 +345,7 @@
             <div class="contact_detail detail">
               <ul id="contact_list">
                 <li>
-                  <h2>Email</h2>
+                  <h2 class="animated" data-animate="fadeInRight delay-0.3s fast">Email</h2>
                   <p>
                   mw127.fbs*gmail.com<br/>
                   *を@にしてお送りください。
@@ -152,13 +360,14 @@
     <footer class="footer">
       <div id="sns_container">
         <div id="github">
-          <img alt="githubのアイコン" src="img/GitHub-Mark-64px.png">
+          <a href="https://github.com/Karin-the-Cat">
+            <img alt="githubのアイコン" src="img/GitHub-Mark-64px.png">   
+          </a>
         </div>
       </div>
       <p id="right">
         © 2021 Miyu Watanabe
       </p>
-      <script src="portfolio.js"></script>
     </footer>
   </body>
 </html>
