@@ -307,7 +307,7 @@ ul {
 }
 
 .chart_bar_aws{
-  width: 70%;
+  width: 80%;
 }
 
 .chart_bar_git{
@@ -340,8 +340,6 @@ ul {
   position: relative;
   max-width: 350px;
 }
-
-.workpic_container {}
 
 #works p {
   margin-left: 4rem;
