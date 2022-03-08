@@ -330,6 +330,11 @@ ul {
   width: 80%;
 }
 
+.chart_bar_ga{
+  width: 70%;
+}
+
+
 .animated{
   opacity: 0;
 }
