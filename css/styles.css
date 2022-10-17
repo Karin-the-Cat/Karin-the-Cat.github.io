@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 400;
   color: #313324;
@@ -159,6 +159,11 @@ h1::before {
   border-radius: 2px;
 }
 
+.indication {
+  font-size: .7rem;
+  color: #4A4D36;
+}
+
 h2 {
   font-size: 1.2rem;
   margin: 0.4rem 0;
@@ -242,12 +247,20 @@ ul {
   width: 70%;
 }
 
+.chart_bar_react{
+  width: 70%;
+}
+
 .chart_bar_vue{
   width: 30%;
 }
 
 .chart_bar_wp{
   width: 80%;
+}
+
+.chart_bar_node{
+  width: 70%;
 }
 
 .chart_bar_py{
@@ -314,8 +327,12 @@ ul {
   width: 80%;
 }
 
+.chart_bar_gcp{
+  width: 50%;
+}
+
 .chart_bar_git{
-  width: 70%;
+  width: 80%;
 }
 
 .chart_bar_svn{
